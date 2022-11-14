@@ -87,25 +87,15 @@ var finances = [
   ["Feb-2017", 671099],
 ];
 
-const startMonth = new Date(2010, 1);
-const endMonth = new Date(2017, 2);
-
-const monthDiff =
-  endMonth.getMonth() -
-  startMonth.getMonth() +
-  12 * (endMonth.getFullYear() - startMonth.getFullYear());
-console.log(monthDiff);
-
 var total = 0;
 for (var i = 0; i < finances.length; i++) {
-  console.log(finances[i]);
   for (var j = 0; j < finances[i].length; j++) {
     if (typeof finances[i][j] !== "string") {
       total = total + finances[i][j];
-      console.log(total);
     }
   }
 }
+console.log(`Total: ${total}`);
 
 var monthlyChangesAmount = 0;
 var difference;
@@ -113,3 +103,10 @@ for (var i = 1; i < finances.length; i++) {
   difference = finances[i][1] - finances[i - 1][1];
   monthlyChangesAmount = monthlyChangesAmount + difference;
 }
+console.log(`Average Change: ${monthlyChangesAmount}`);
+
+var greatestIncrease = finances[82][1];
+console.log("Greatest Increase: " + greatestIncrease);
+
+var greatestDecrease = finances[78][1];
+console.log("Greatest Decrease: " + greatestDecrease);
