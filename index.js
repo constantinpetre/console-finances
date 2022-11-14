@@ -96,13 +96,13 @@ const monthDiff =
   12 * (endMonth.getFullYear() - startMonth.getFullYear());
 console.log(monthDiff);
 
-tot = 0;
+var total = 0;
 for (var i = 0; i < finances.length; i++) {
   console.log(finances[i]);
   for (var j = 0; j < finances[i].length; j++) {
     if (typeof finances[i][j] !== "string") {
-      tot = tot + finances[i][j];
-      console.log(tot);
+      total = total + finances[i][j];
+      console.log(total);
     }
   }
 }
