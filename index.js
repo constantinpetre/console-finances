@@ -107,14 +107,21 @@ for (var i = 0; i < finances.length; i++) {
   }
 }
 
-var col1 = finances.map(function (value, index) {
-  return value[0];
-});
-
-console.log(col1);
-
-export function monthsMoney(item, context) {
-  item.col1 = item.col1 + " =" + item.average;
-
-  return item;
+var monthlyChangesAmount = 0;
+var difference;
+for (var i = 1; i < finances.length; i++) {
+  difference = finances[i][1] - finances[i - 1][1];
+  monthlyChangesAmount = monthlyChangesAmount + difference;
 }
+
+// var col1 = finances.map(function (value, index) {
+//   return value[0];
+// });
+
+// console.log(col1);
+
+// export function monthsMoney(item, context) {
+//   item.col1 = item.col1 + " =" + item.average;
+
+//   return item;
+// }
