@@ -105,8 +105,8 @@ for (var i = 1; i < finances.length; i++) {
 }
 console.log(`Average Change: ${monthlyChangesAmount}`);
 
-var greatestIncrease = finances[82][1];
+var greatestIncrease = finances[25][1];
 console.log("Greatest Increase: " + greatestIncrease);
 
-var greatestDecrease = finances[78][1];
+var greatestDecrease = finances[44][1];
 console.log("Greatest Decrease: " + greatestDecrease);
